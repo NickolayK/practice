@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Image } from 'src/app/models/image.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
 
 

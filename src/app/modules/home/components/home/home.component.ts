@@ -20,9 +20,7 @@ constructor(
     private router: Router,
     private authenticationService: AuthService,
     private imageService: ImageService
-) {
-
-}
+) {}
 
   logout() {
       this.authenticationService.logout();

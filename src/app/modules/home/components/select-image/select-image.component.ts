@@ -14,15 +14,9 @@ export class SelectImageComponent implements OnInit {
 
 @Input() slides: any[];
 
-constructor(
-    private imageService: ImageService
-) {
+constructor( private imageService: ImageService) {}
 
-}
-
-  ngOnInit(): void {
-    // this.slides$ = this.imageService.getImage()
-  }
+  ngOnInit(): void {}
 
   public checkImageStatus(slide: Image, matCarouselSlide) {
     const isVaforite = this.imageService.isOnVaforite(slide);

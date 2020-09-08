@@ -1,10 +1,8 @@
 <div class="container">
     <div class="wraper">
-    <app-image-item *ngFor="let image of images$ | async; index as i"
-                    [image]="image"
-                    (setAsBackGround)="onSetAsBackGround(image)"
-                    > 
-    </app-image-item>
+        <app-image-item *ngFor="let image of images$ | async; index as i"
+                        [image]="image"
+                        (setAsBackGround)="onSetAsBackGround(image)"> 
+        </app-image-item>
+    </div>
 </div>
-</div>
-favor

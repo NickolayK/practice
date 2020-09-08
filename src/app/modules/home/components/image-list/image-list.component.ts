@@ -15,13 +15,10 @@ export class ImageListComponent implements OnInit {
   constructor(private imageService: ImageService, private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
-
     this.images$ = this.imageService.favoriteImageData;
   }
 
-
   onSetAsBackGround(image): void {
-
     this.renderer.setStyle(this.el.nativeElement.children[0], 'backgroundImage', `url(${ image.urls.small })`);
   }
 

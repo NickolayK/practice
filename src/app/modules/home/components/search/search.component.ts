@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormControl, FormBuilder } from '@angular/forms';
-import { Subscription, Observable } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
-import { ImageService } from 'src/app/services/image.service'
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-search',

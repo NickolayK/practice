@@ -1,25 +1,18 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Image } from '../models/image.model';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { map, tap } from 'rxjs/operators';
-import { BehaviorSubject, of, Observable } from 'rxjs';
-// import { environment } from '@environments/environment';
-// import { User } from '@app/_models';
+import { Image } from '../models/image.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImageService {
 
-  queryUrl = '?query=';
-
   private _favoriteImageSubject: BehaviorSubject<Image[]> = new BehaviorSubject([]);
-  
-
   public readonly favoriteImageData: Observable<Image[]> = this._favoriteImageSubject.asObservable();
-
-  private favoriteImages: Image[] = [ ];
+  public queryUrl = '?query=';
 
   constructor(private http: HttpClient) { }
 
@@ -37,8 +30,6 @@ export class ImageService {
       })
     );
 }
-
-
 
   addToFavorite(image: any) {
     const images = this._favoriteImageSubject.value;
