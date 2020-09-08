@@ -1,0 +1,17 @@
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{image.name}}</mat-card-title>
+        </mat-card-header>
+
+        <img mat-card-image [src]="image.urls.small" >
+        <mat-card-content> </mat-card-content>
+
+        <mat-card-actions>
+            <div>
+            <button mat-button (click)="onSetAsBackground()">Set as background</button>
+            <button mat-button (click)="onRemove()">remove </button>
+        </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

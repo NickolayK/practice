@@ -1,0 +1,12 @@
+<div class="wraper">
+    <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text"  [formControl]="control">
+        <button mat-button *ngIf="control.value" matSuffix mat-icon-button aria-label="Clear" (click)="control.patchValue('')">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+</div>
+
+
+  <app-select-image [slides]="items"></app-select-image>

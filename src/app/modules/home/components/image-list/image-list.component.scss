@@ -1,0 +1,14 @@
+.container{
+
+    min-height: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}

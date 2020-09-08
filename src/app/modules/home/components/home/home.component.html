@@ -1,0 +1,11 @@
+<div class="toolbar" role="banner">
+  <span [routerLink]="'search-images'" class="routerLink">Search images</span>
+    <span [routerLink]="'favorites'" class="routerLink" *ngIf="(images$ | async).length !== 0">Favorite image</span>
+    <div class="spacer"></div>
+    <span class="logout" (click)='logout()'>LogOut</span>
+
+</div>
+
+
+
+<router-outlet></router-outlet>
